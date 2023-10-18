@@ -31,7 +31,7 @@ func TestNewTransaction(t *testing.T) {
 	amount := 3.10
 	statusTransaction := "pending"
 	transaction, err := model.NewTransaction(account, amount, pixKey, "My description")
-	//
+
 	require.Nil(t, err)
 	require.NotNil(t, uuid.FromStringOrNil(transaction.ID))
 	require.Equal(t, transaction.Amount, amount)
